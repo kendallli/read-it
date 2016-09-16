@@ -18,6 +18,7 @@
 		B6C00C681D8B543A005DAB1E /* Read_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C00C671D8B543A005DAB1E /* Read_ItUITests.swift */; };
 		B6DF4AE61D8B563500477617 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF4AE51D8B563500477617 /* common.swift */; };
 		B6DF4AE81D8B5DBB00477617 /* RSS Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF4AE71D8B5DBB00477617 /* RSS Info.swift */; };
+		B6DF4AF01D8BA2A100477617 /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF4AEF1D8BA2A100477617 /* RSSTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B6DF4AE51D8B563500477617 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		B6DF4AE71D8B5DBB00477617 /* RSS Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSS Info.swift"; sourceTree = "<group>"; };
 		B6DF4AEA1D8B699F00477617 /* Read It-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Read It-Bridging-Header.h"; sourceTree = "<group>"; };
+		B6DF4AEF1D8BA2A100477617 /* RSSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTableViewCell.swift; sourceTree = "<group>"; };
 		D8C7A859355D1ED60451451F /* Pods-Read It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Read It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Read It/Pods-Read It.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				B6DF4AEE1D8B73AE00477617 /* Supporting Files */,
 				B6C00C441D8B5439005DAB1E /* AppDelegate.swift */,
+				B6DF4AEF1D8BA2A100477617 /* RSSTableViewCell.swift */,
 				B6C00C461D8B5439005DAB1E /* ViewController.swift */,
 				B6C00C481D8B5439005DAB1E /* Main.storyboard */,
 				B6C00C4E1D8B5439005DAB1E /* Assets.xcassets */,
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DF4AF01D8BA2A100477617 /* RSSTableViewCell.swift in Sources */,
 				B6DF4AE61D8B563500477617 /* common.swift in Sources */,
 				B6C00C471D8B5439005DAB1E /* ViewController.swift in Sources */,
 				B6C00C4D1D8B5439005DAB1E /* Read_It.xcdatamodeld in Sources */,

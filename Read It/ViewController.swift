@@ -17,7 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var spinner: UIActivityIndicatorView!
     
     
-    
+    // Available details from http://feeds.reuters.com/reuters/MostRead
+    // summary
+    // date
+    // id
+    // link
     var items = [MWFeedItem]()
     
     override func viewDidLoad() {
@@ -69,20 +73,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "rssCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rssCell", for: indexPath) as! RSSTableViewCell
         
-        // find record for current cell
-        let thisRecord : MWFeedItem  = self.items[indexPath.row]
-        
-        // set value for main title and detail tect
-        cell.textLabel?.text = thisRecord.title
-        cell.detailTextLabel?.text = thisRecord.summary
+        //configure cell
         self.configureCell(cell: cell, atIndexPath: indexPath as IndexPath)
-        // return cell
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 150
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.items[indexPath.row] as MWFeedItem
@@ -92,18 +90,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(con, animated: true)
     }
     
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
-        /**
+    func configureCell(cell: RSSTableViewCell, atIndexPath indexPath: IndexPath) {
+        
         let item = self.items[indexPath.row] as MWFeedItem
-        cell.textLabel?.text = item.title
-        cell.textLabel?.font = UIFont.systemFontOfSize(14.0)
-        cell.textLabel?.numberOfLines = 0
-     
-        let projectURL = item.link.componentsSeparatedByString("?")[0]
-        let imgURL: URL? = URL(string: projectURL + "/cover_image?style=200x200#")
-        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        cell.imageView?.setImageWithURL(imgURL, placeholderImage: UIImage(named: "logo.png"))
- **/
+        
+        // set value for title and summary
+        cell.titleLabel.text = item.title
+        cell.titleLabel.font = UIFont.systemFont(ofSize: 17)
+        cell.titleLabel.numberOfLines = 2
+        cell.summaryLabel.text = item.summary.components(separatedBy: "<")[0]
+        cell.summaryLabel.font = UIFont.systemFont(ofSize: 13)
+        cell.summaryLabel.numberOfLines = 3
+        
  
     }
  
