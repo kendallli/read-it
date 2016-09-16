@@ -56,6 +56,7 @@
 		B6C00C691D8B543A005DAB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6DF4AE51D8B563500477617 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		B6DF4AE71D8B5DBB00477617 /* RSS Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSS Info.swift"; sourceTree = "<group>"; };
+		B6DF4AEA1D8B699F00477617 /* Read It-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Read It-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C7A859355D1ED60451451F /* Pods-Read It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Read It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Read It/Pods-Read It.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,15 +119,13 @@
 		B6C00C431D8B5439005DAB1E /* Read It */ = {
 			isa = PBXGroup;
 			children = (
+				B6DF4AEE1D8B73AE00477617 /* Supporting Files */,
 				B6C00C441D8B5439005DAB1E /* AppDelegate.swift */,
 				B6C00C461D8B5439005DAB1E /* ViewController.swift */,
 				B6C00C481D8B5439005DAB1E /* Main.storyboard */,
-				B6DF4AE71D8B5DBB00477617 /* RSS Info.swift */,
 				B6C00C4E1D8B5439005DAB1E /* Assets.xcassets */,
 				B6C00C501D8B5439005DAB1E /* LaunchScreen.storyboard */,
-				B6C00C531D8B5439005DAB1E /* Info.plist */,
 				B6C00C4B1D8B5439005DAB1E /* Read_It.xcdatamodeld */,
-				B6DF4AE51D8B563500477617 /* common.swift */,
 			);
 			path = "Read It";
 			sourceTree = "<group>";
@@ -147,6 +146,17 @@
 				B6C00C691D8B543A005DAB1E /* Info.plist */,
 			);
 			path = "Read ItUITests";
+			sourceTree = "<group>";
+		};
+		B6DF4AEE1D8B73AE00477617 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6DF4AE51D8B563500477617 /* common.swift */,
+				B6DF4AEA1D8B699F00477617 /* Read It-Bridging-Header.h */,
+				B6C00C531D8B5439005DAB1E /* Info.plist */,
+				B6DF4AE71D8B5DBB00477617 /* RSS Info.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BA2E5219A0720C3119E2FD30 /* Pods */ = {
@@ -230,6 +240,7 @@
 					B6C00C401D8B5436005DAB1E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = VZ7BD3RTLX;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					B6C00C571D8B5439005DAB1E = {
@@ -503,11 +514,14 @@
 			baseConfigurationReference = D8C7A859355D1ED60451451F /* Pods-Read It.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VZ7BD3RTLX;
 				INFOPLIST_FILE = "Read It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ruili.Read-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Read It/Read It-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -517,11 +531,13 @@
 			baseConfigurationReference = 96750E2BC7CCAC7EBCD74451 /* Pods-Read It.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VZ7BD3RTLX;
 				INFOPLIST_FILE = "Read It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ruili.Read-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Read It/Read It-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
