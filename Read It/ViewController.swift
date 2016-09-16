@@ -101,7 +101,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.summaryLabel.text = item.summary.components(separatedBy: "<")[0]
         cell.summaryLabel.font = UIFont.systemFont(ofSize: 13)
         cell.summaryLabel.numberOfLines = 3
+        // for some reason the image could not be downloaded correctly
+        // tried to use http://feedreader.com/online/#/reader/category/0/feed/4051853/
+        // no images shown in RSS list either
+        let imageURL:URL?
+        if(item.link.contains("img")){
+            let imageURLStr = item.link.components(separatedBy: "img")[1]
+            imageURL = URL(string: imageURLStr.components(separatedBy: "\"")[1])
+            print("item link contains img: \(imageURL)")
+        }else{
+            imageURL = nil
+        }
         
+        cell.pictureImageView.contentMode = UIViewContentMode.scaleAspectFit
+        if imageURL != nil {
+            cell.pictureImageView.setImageWith(imageURL!, placeholderImage: UIImage(named: "loadingImage"))
+        }else{
+            cell.pictureImageView.image = UIImage(named: "loadingImage")
+        }
  
     }
  
