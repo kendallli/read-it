@@ -81,7 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func feedParser(_ parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
         print(item)
-        //self.items.append(item)
+        // when it gets feed item the item is saved into core data
         self.saveRSSInfo(RSSInfo: item)
     }
     func feedParser(_ parser: MWFeedParser!, didFailWithError error: Error!) {
@@ -215,6 +215,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let results =
                 try managedContext.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+            // get new rss feeds from core data and store in local instance
             self.rssItems = results as! [Read_ItRSSInfo]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
