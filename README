@@ -1,3 +1,7 @@
+
+Xcode Version 8.0 (8A218a)
+iOS Development Target : 10.0
+
 Podfile
 
 platform :ios, '7.0'
