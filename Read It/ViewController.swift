@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let CELL_HIGHT = 120
     
-    // Available details from http://feeds.reuters.com/reuters/MostRead
+    // Available details from http://rss.cnn.com/rss/cnn_topstories.rss
     // { summary
     //  date
     //  id

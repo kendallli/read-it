@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B11089D16DF96CC4813E871A /* libPods-Read It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECD6136E21E4700ACCEC53 /* libPods-Read It.a */; };
+		B61CA4551DACC6A8009F0249 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61CA4541DACC6A8009F0249 /* FirstViewController.swift */; };
 		B6C00C451D8B5439005DAB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C00C441D8B5439005DAB1E /* AppDelegate.swift */; };
 		B6C00C471D8B5439005DAB1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C00C461D8B5439005DAB1E /* ViewController.swift */; };
 		B6C00C4A1D8B5439005DAB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C00C481D8B5439005DAB1E /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		8FECD6136E21E4700ACCEC53 /* libPods-Read It.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Read It.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96750E2BC7CCAC7EBCD74451 /* Pods-Read It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Read It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Read It/Pods-Read It.release.xcconfig"; sourceTree = "<group>"; };
+		B61CA4541DACC6A8009F0249 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B6C00C411D8B5439005DAB1E /* Read It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Read It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C00C441D8B5439005DAB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C00C461D8B5439005DAB1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B6C00C441D8B5439005DAB1E /* AppDelegate.swift */,
 				B6DF4AEF1D8BA2A100477617 /* RSSTableViewCell.swift */,
 				B6C00C461D8B5439005DAB1E /* ViewController.swift */,
+				B61CA4541DACC6A8009F0249 /* FirstViewController.swift */,
 				B6C00C481D8B5439005DAB1E /* Main.storyboard */,
 				B6C00C4E1D8B5439005DAB1E /* Assets.xcassets */,
 				B6C00C501D8B5439005DAB1E /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 				B6DF4AF01D8BA2A100477617 /* RSSTableViewCell.swift in Sources */,
 				B6DF4AFC1D8D529B00477617 /* Read_ItRSSInfo+CoreDataProperties.swift in Sources */,
 				B6DF4AE61D8B563500477617 /* common.swift in Sources */,
+				B61CA4551DACC6A8009F0249 /* FirstViewController.swift in Sources */,
 				B6C00C471D8B5439005DAB1E /* ViewController.swift in Sources */,
 				B6DF4AFB1D8D529B00477617 /* Read_ItRSSInfo+CoreDataClass.swift in Sources */,
 				B6C00C4D1D8B5439005DAB1E /* Read_It.xcdatamodeld in Sources */,
