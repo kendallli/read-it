@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xXG-mq-Ef6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OyZ-DE-M1P">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +18,12 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k47-Zw-6Fz"/>
+                        <segue destination="xXG-mq-Ef6" kind="relationship" relationship="rootViewController" id="OgA-SF-AWc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqI-Vi-i2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="151"/>
+            <point key="canvasLocation" x="-1082" y="207"/>
         </scene>
         <!--Read It-->
         <scene sceneID="tne-QT-ifu">
@@ -105,6 +104,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Read It" id="VSw-gi-RTY">
                         <barButtonItem key="backBarButtonItem" title="&lt;" id="R2Y-BS-SIm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="vrl-U8-2N3">
+                            <connections>
+                                <segue destination="xXG-mq-Ef6" kind="show" id="7Dx-uV-1RJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="epn-H5-Pbd" id="A63-hW-yKS"/>
@@ -115,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="956" y="151"/>
         </scene>
-        <!--First View Controller-->
+        <!--Select RSS Feed-->
         <scene sceneID="nDI-Gh-qps">
             <objects>
                 <viewController id="xXG-mq-Ef6" customClass="FirstViewController" customModule="Read_It" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +128,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YiU-WH-muL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rck-9f-sD1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XzA-2p-P1l">
@@ -150,12 +154,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="zvy-oB-ONl">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uP-SF-ODD">
                                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
@@ -174,6 +172,9 @@
                                         <state key="normal" title="Go">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="T2o-Pa-J3P"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiu-2Y-re3">
                                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -185,9 +186,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="zvy-oB-ONl" firstAttribute="width" secondItem="LNo-Vh-Wlj" secondAttribute="height" multiplier="20:15" id="3Dr-13-snx"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,16 +196,19 @@
                             <constraint firstItem="XzA-2p-P1l" firstAttribute="centerX" secondItem="rck-9f-sD1" secondAttribute="centerX" id="xYp-g9-veb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Select RSS Feed" id="tQJ-WM-2MZ" userLabel="Select RSS Feed"/>
                     <connections>
                         <outlet property="feedLinkPickerView" destination="LNo-Vh-Wlj" id="BXR-as-mHc"/>
-                        <outlet property="feedLinkTextView" destination="zvy-oB-ONl" id="m3p-w9-QKt"/>
                         <outlet property="goButton" destination="2tg-ge-hVp" id="3MG-yd-tfY"/>
                         <outlet property="stackView" destination="XzA-2p-P1l" id="9H3-Lo-ytq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kn-Js-urP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-897.10144927536237" y="158.1521739130435"/>
+            <point key="canvasLocation" x="-33" y="151"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OgA-SF-AWc"/>
+    </inferredMetricsTieBreakers>
 </document>

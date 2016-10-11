@@ -35,7 +35,7 @@ struct rssLinks {
     }
 }
 
-class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate{
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var feedLinkPickerView: UIPickerView!
@@ -69,19 +69,19 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func setupPickerViewData(){
         pickerData = rssLinks()
         pickerData?.names = [
-            "Top Stories",
-            "World",
-            "U.S.",
-            "Business (CNNMoney.com)",
-            "Politics",
-            "Technology",
-            "Health",
-            "Entertainment",
-            "Travel",
-            "Living",
-            "Video",
+            "CNN Top Stories",
+            "CNN World",
+            "CNN U.S.",
+            "CNN Business (CNNMoney.com)",
+            "CNN Politics",
+            "CNN Technology",
+            "CNN Health",
+            "CNN Entertainment",
+            "CNN Travel",
+            "CNN Living",
+            "CNN Video",
             "CNN Student News",
-            "Most Recent"]
+            "CNN Most Recent"]
         
         pickerData?.urls = [
             "http://rss.cnn.com/rss/cnn_topstories.rss",
@@ -117,8 +117,8 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     // Catpure the picker view selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        feedURLselected = pickerData?.urls[row]
-        print(feedURLselected)
+        RSS_FEED_URL  = (pickerData?.urls[row])!
+        print("RSS_FEED_URL = "+RSS_FEED_URL)
     }
     
     override func didReceiveMemoryWarning() {
@@ -126,7 +126,10 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -10,4 +10,4 @@ import Foundation
 
 
 // RSS Feed URL
-let RSS_FEED_URL = "http://feeds.reuters.com/reuters/MostRead"
+var RSS_FEED_URL = "http://feeds.reuters.com/reuters/MostRead"
