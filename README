@@ -1,4 +1,12 @@
 
+An iOS app that can read RSS feeds
+
+Selectable RSS links
+
+CoreData is used to save the titles and descriptions of feed items.
+
+Default Image is used in cause there is no image pulled from server.
+
 Xcode Version 8.0 (8A218a)
 iOS Development Target : 10.0
 
